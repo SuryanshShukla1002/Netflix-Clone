@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "nsans-light": ["Nsans Light"],
+        "nsans-medium": ["Nsans Medium"],
+        "nsans-bold": ["Nsans Bold"]
+      }
+    },
   },
   plugins: [],
 }
