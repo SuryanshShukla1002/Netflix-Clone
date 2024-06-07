@@ -55,7 +55,7 @@ const Profile = () => {
       <div id={`slider`} className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide ">
         {movies.map((movie) => (
 
-<div key={movie.id} className="relative w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block rounded-lg overflow-hidden cursor-pointer m-2">
+ <div key={movie.id} className="relative w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block rounded-lg overflow-hidden cursor-pointer m-2">
 <img
   className="w-full h-40 block object-cover object-top"
   src={createImageUrl(movie.backdrop_path ?? movie.poster_path, "w500")}

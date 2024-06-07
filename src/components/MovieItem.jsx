@@ -3,15 +3,17 @@ import { createImageUrl } from "../services/movieServices";
 import {FaHeart, FaRegHeart} from 'react-icons/fa';
 import { doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import {db} from '../services/Firebase'
+import { UserAuth } from '../context/AuthContext';
 
 const MovieItem = ({ movie }) => {
     const [like, setLike] = useState(false)
+    const {user} = UserAuth()
   const { title, backdrop_path, poster_path } = movie;
   const markFavShow = async () => {
     const userEmail = user?.email
 
     if(userEmail) {
-      const userDoc = doc(db, 'users' , userEmail)
+      const userDoc = doc(db, 'users' , userEmail);
       setLike(!like)
       await updateDoc(userDoc, {
         favShows: arrayUnion({...movie})
