@@ -12,7 +12,7 @@ const Navbar = () => {
       console.log(err);
     }
   };
-  
+
   return (
     <div className="absolute w-full p-4 flex items-center justify-between z-50">
       <Link to="/">
